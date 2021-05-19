@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
 
 function App() {
+  const [count, setCount] = React.useState(0);
+
+  const incrementCount = () => setCount(count + 1);
+  const decrementCount = () => setCount(count - 1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        okkk
-      </header>
+    <div>
+      <h1>count: {count}</h1>
+      <button onClick={incrementCount}>+</button>
+      <button onClick={decrementCount}>-</button>
     </div>
   );
 }
